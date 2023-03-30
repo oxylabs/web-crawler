@@ -11,7 +11,6 @@ parsed_results = requests.request(
 # Write the decoded JSON response to a .json file.
 with open('parsed_results_1.json', 'w') as f:
     json.dump(parsed_results.json(), f)
-    f.close()
 
 # Print the decoded JSON response.
 pprint(parsed_results.json())
