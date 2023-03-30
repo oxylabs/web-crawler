@@ -15,7 +15,6 @@ html_results = soup.prettify()
 # Write the HTML results to an .html file.
 with open('html_results.html', 'w') as f:
     f.write(html_results)
-    f.close()
-
+    
 # Print the HTML results.
 print(html_results)
