@@ -32,7 +32,6 @@ response = requests.request(
 # Write the decoded JSON response to a .json file.
 with open('job_sitemap.json', 'w') as f:
     json.dump(response.json(), f)
-    f.close()
 
 # Print the decoded JSON response.
 pprint(response.json())
