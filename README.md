@@ -221,7 +221,6 @@ response = requests.request(
 # Write the decoded JSON response to a .json file.
 with open('job_sitemap.json', 'w') as f:
     json.dump(response.json(), f)
-    f.close()
 
 # Print the decoded JSON response.
 pprint(response.json())
@@ -247,7 +246,6 @@ sitemap = requests.request(
 # Write the decoded JSON response to a .json file.
 with open('sitemap.json', 'w') as f:
     json.dump(sitemap.json(), f)
-    f.close()
 
 # Print the decoded JSON response.
 pprint(sitemap.json())
@@ -299,7 +297,6 @@ response = requests.request(
 # Write the decoded JSON response to a .json file.
 with open('job_parsed.json', 'w') as f:
     json.dump(response.json(), f)
-    f.close()
 
 # Print the decoded JSON response.
 pprint(response.json())
@@ -331,7 +328,6 @@ parsed_results = requests.request(
 # Write the decoded JSON response to a .json file.
 with open('parsed_results_1.json', 'w') as f:
     json.dump(parsed_results.json(), f)
-    f.close()
 
 # Print the decoded JSON response.
 pprint(parsed_results.json())
@@ -408,7 +404,6 @@ html_results = soup.prettify()
 # Write the HTML results to an .html file.
 with open('html_results.html', 'w') as f:
     f.write(html_results)
-    f.close()
 
 # Print the HTML results.
 print(html_results)
