@@ -11,7 +11,6 @@ sitemap = requests.request(
 # Write the decoded JSON response to a .json file.
 with open('sitemap.json', 'w') as f:
     json.dump(sitemap.json(), f)
-    f.close()
 
 # Print the decoded JSON response.
 pprint(sitemap.json())
