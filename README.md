@@ -49,7 +49,7 @@ can set Web Crawler to upload the results to your cloud storage.
 
 You can easily control the crawling scope by adjusting its width and
 depth with
-[<u>filters</u>](https://developers.oxylabs.io/scraper-apis/web-crawler#filters).
+[<u>filters</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#filters).
 Web Crawler can also use various scraping parameters, such as
 geo-location and user agent, to increase the success rate of crawling
 jobs. Most of these scraping parameters depend on the Scraper API you
@@ -62,7 +62,7 @@ can initiate, stop and resume your job, get job info, get the list of
 result chunks, and get the results. Below are the endpoints we’ll use in
 this crawling tutorial. For more information and output examples, visit
 [<u>our
-documentation</u>](https://developers.oxylabs.io/scraper-apis/web-crawler#endpoints).
+documentation</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#endpoints).
 
 #### Create a new job
 
@@ -107,7 +107,7 @@ endpoint to get a list of chunk files available.
 
 With this endpoint, you can download a particular chunk of the aggregate
 result. The contents of the response body depend on the [<u>output
-type</u>](https://developers.oxylabs.io/scraper-apis/web-crawler#output)
+type</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#output)
 you choose.
 
 The result can be one of the following:
@@ -122,22 +122,22 @@ The result can be one of the following:
 
 For your convenience, we’ve put all the available parameters you can use
 in the table below. It can also be found in [<u>our
-documentation</u>](https://developers.oxylabs.io/scraper-apis/web-crawler#query-parameters).
+documentation</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#query-parameters).
 
 | **Parameter**                 | **Description**                                                                                                                                                                                                                                                                                                   | **Default Value** |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
 | **url**                       | The URL of the starting point                                                                                                                                                                                                                                                                                     | \-                |
-| `filters`                       | These parameters are used to configure the breadth and depth of the crawling job, as well as determine which URLs should be included in the end result. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-crawler#filters) for more information.                                           | \-                |
-| `filters:crawl`                 | Specifies which URLs Web Crawler will include in the end result. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-crawler#crawl) for more information.                                                                                                                                    | \-                |
-| `filters:process`               | Specifies which URLs Web Crawler will scrape. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-crawler#process) for more information.                                                                                                                                                     | \-                |
-| `filters:max_depth`             | Determines the max length of URL chains Web Crawler will follow. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-crawler#max_depth) for more information.                                                                                                                                | `1`                |
+| `filters`                       | These parameters are used to configure the breadth and depth of the crawling job, as well as determine which URLs should be included in the end result. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#filters) for more information.                                           | \-                |
+| `filters:crawl`                 | Specifies which URLs Web Crawler will include in the end result. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#crawl) for more information.                                                                                                                                    | \-                |
+| `filters:process`               | Specifies which URLs Web Crawler will scrape. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#process) for more information.                                                                                                                                                     | \-                |
+| `filters:max_depth`             | Determines the max length of URL chains Web Crawler will follow. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#max_depth) for more information.                                                                                                                                | `1`                |
 | `scrape_params`                 | These parameters are used to fine-tune the way we perform the scraping jobs. For instance, you may want us to execute Javascript while crawling a site, or you may prefer us to use proxies from a particular location.                                                                                           | \-                |
-| `scrape_params:source`          | See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-crawler#source) for more information.                                                                                                                                                                                                    | \-                |
-| `scrape_params:geo_location`    | The geographical location that the result should be adapted for. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-crawler#geo_location) for more information.                                                                                                                             | \-                |
-| `scrape_params:user_agent_type` | Device type and browser. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/getting-started/api-reference/global-parameter-values#user_agent_type) for more information.                                                                                                                        | `desktop`           |
-| `scrape_params:render`          | Enables JavaScript rendering. Use when the target requires JavaScript to load content. If you want to use this feature, set the parameter value to html. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/getting-started/api-reference/global-parameter-values#render) for more information. | \-                |
-| `output:type\_`                 | The output type. We can return a sitemap (list of URLs found while crawling) or an aggregate file containing HTML results or parsed data. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-crawler#type_) for more information.                                                           | \-                |
-| `upload`                        | These parameters are used to describe the cloud storage location where you would like us to put the result once we're done. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/getting-started/api-reference/integration-methods/push-pull#upload-to-cloud-storage) for more information.       | \-                |
+| `scrape_params:source`          | See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#source) for more information.                                                                                                                                                                                                    | \-                |
+| `scrape_params:geo_location`    | The geographical location that the result should be adapted for. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#geo_location) for more information.                                                                                                                             | \-                |
+| `scrape_params:user_agent_type` | Device type and browser. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#user_agent_type) for more information.                                                                                                                        | `desktop`           |
+| `scrape_params:render`          | Enables JavaScript rendering. Use when the target requires JavaScript to load content. If you want to use this feature, set the parameter value to html. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#render) for more information. | \-                |
+| `output:type\_`                 | The output type. We can return a sitemap (list of URLs found while crawling) or an aggregate file containing HTML results or parsed data. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#type) for more information.                                                           | \-                |
+| `upload`                        | These parameters are used to describe the cloud storage location where you would like us to put the result once we're done. See [<u>this section</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#upload) for more information.       | \-                |
 | `upload:storage_type`           | Define the cloud storage type. The only valid value is s3 (for AWS S3). gcs (for Google Cloud Storage) is coming soon.                                                                                                                                                                                            | \-                |
 | `upload:storage_url`            | The storage bucket URL.                                                                                                                                                                                                                                                                                           | \-                |
 
@@ -182,7 +182,7 @@ starting page. With the `crawl` and `process` parameters being set to `“.\*”
 Web Crawler will follow and return any Amazon URL. These two parameters
 use regular expressions (regex) to determine what URLs should be crawled
 and processed. Be sure to visit our
-[<u>documentation</u>](https://developers.oxylabs.io/scraper-apis/web-crawler#regex-value-examples)
+[<u>documentation</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler#regex-value-examples)
 for more details and useful resources.
 
 We don’t need to include the `source` parameter because we aren’t scraping
@@ -309,7 +309,7 @@ pprint(response.json())
 Note that if you want to use the `geo_location` parameter when scraping
 Amazon pages, you must set its value to the preferred location’s
 zip/postal code. For more information, visit [<u>this
-page</u>](https://developers.oxylabs.io/scraper-apis/e-commerce-scraper-api/amazon/parameter-values#geo_location)
+page</u>](https://developers.oxylabs.io/scraper-apis/e-commerce-scraper-api/features/geo-location#amazon)
 in our documentation.
 
 Once the job is complete, you can check how many chunks your request has
@@ -417,7 +417,7 @@ You can modify the code files as needed per your requirements.
 
 This tutorial covered the fundamental aspects of using Web Crawler. We
 recommend looking at [<u>our
-documentation</u>](https://developers.oxylabs.io/scraper-apis/web-crawler)
+documentation</u>](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/web-crawler)
 for more information on using the endpoints and query parameters. In
 case you have any questions, you can always contact us at
 [<u>hello@oxylabs.io</u>](mailto:hello@oxylabs.io) or via live chat on
